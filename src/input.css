@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #D4AF37;
+  --neon: #39FF14;
+}

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Designer Portfolio</title>
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #16a34a 0%, #DFAE26 100%);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+
+        /* Hero Image Animation */
+        .hero-image {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Decorative circles */
+        .circle-decoration {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background: white;
+            top: -100px;
+            right: -100px;
+        }
+
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            background: white;
+            bottom: -50px;
+            left: -50px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between py-4 px-4">
+            <div class="flex items-center space-x-3">
+                <img src="img/logo_ekraf.png" class="h-14" alt="">
+                <div class="text-xl font-bold text-green-700">Ekraf Purwakarta</div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-green-700 px-3 border-b-2 border-green-700 pb-1 font-medium text-lg">
+                    Home
+                </a>
+                <a href="#"
+                    class="text-gray-700 px-3 border-b-2 border-b-white hover:text-green-700 hover:border-b-2 hover:border-green-700 pb-1 text-lg transition duration-300 font-medium">
+                    Agenda
+                </a>
+                <a href="#"
+                    class="text-gray-700 px-3 border-b-2 border-b-white hover:text-green-700 hover:border-b-2 hover:border-green-700 pb-1 text-lg transition duration-300 font-medium">
+                    UMKM
+                </a>
+                <a href="#"
+                    class="text-gray-700 px-3 border-b-2 border-b-white hover:text-green-700 hover:border-b-2 hover:border-green-700 pb-1 text-lg transition duration-300 font-medium">
+                    Tentang
+                </a>
+                <a href="#"
+                    class="text-white px-6 py-3 rounded-full text-sm font-medium
+                   bg-green-600 hover:bg-green-500 focus:outline-2 focus:outline-offset-2 focus:outline-green-700 active:bg-green-700 transition duration-300 shadow-lg hover:shadow-xl">
+                    Daftar Pelaku Ekraf
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
+            <a href="#" class="block py-2 text-green-700 font-medium border-b border-gray-200">Home</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-green-700 border-b border-gray-200">Agenda</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-green-700 border-b border-gray-200">UMKM</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-green-700 border-b border-gray-200">Tentang</a>
+            <a href="#" class="block py-3 mt-3 text-center text-white bg-green-600 rounded-full font-medium">Daftar
+                Pelaku Ekraf</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section - REDESIGNED -->
+    <section class="gradient-bg text-white py-16 md:py-24 lg:py-32 relative overflow-hidden">
+        <!-- Decorative circles -->
+        <div class="circle-decoration circle-1"></div>
+        <div class="circle-decoration circle-2"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-20">
+
+                <!-- Text content -->
+                <div class="md:w-1/2 space-y-8">
+                    <!-- Badge -->
+                    <div class="inline-block">
+                        <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+                            Platform Ekonomi Kreatif
+                        </span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Connect
+                        <span class="block mt-2">Collaboration</span>
+                        <span class="block mt-2 text-yellow-300">Commerce</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-base md:text-lg text-white/90 leading-relaxed max-w-xl">
+                        Komite Ekraf Purwakarta, sebuah badan independen non-pemerintah yang dibentuk oleh kepala
+                        daerah,
+                        kini memiliki tugas strategis dalam menyokong program pembangunan ekonomi daerah di sektor
+                        industri kreatif.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="flex flex-wrap gap-8 pt-8 border-t border-white/20">
+                        <div>
+                            <div class="text-3xl md:text-4xl font-bold">160+</div>
+                            <div class="text-white/80 text-sm">Pelaku UMKM</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl md:text-4xl font-bold">50+</div>
+                            <div class="text-white/80 text-sm">Total Agenda <br>yang terlaksana</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl md:text-4xl font-bold">17</div>
+                            <div class="text-white/80 text-sm">Sub-Sektor</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class=" flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <!-- Glowing background effect -->
+                        <div class="absolute inset-0 bg-yellow-300/20 rounded-full blur-3xl"></div>
+
+                        <!-- Main image container -->
+                        <div class="relative bg-white/10 backdrop-blur-sm rounded-3xl p-0 shadow-2xl hero-image">
+                            <div class="backdrop-blur-sm rounded-2xl pt-10">
+                                <!-- Replace with actual image -->
+                                <img src="img/CROP.png" class="mb-0 p-0" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Wave divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full h-auto">
+                <path fill="#f9fafb" fill-opacity="1"
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+
+    <!-- About Me Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <span class="text-green-600 font-semibold text-sm uppercase tracking-wider">Tentang Kami</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 mt-2">Memberdayakan Ekonomi Kreatif
+                    </h2>
+                    <p class="text-gray-600 mb-8 max-w-lg leading-relaxed">
+                        Komite Ekraf Purwakarta hadir sebagai wadah kolaborasi dan pengembangan pelaku ekonomi kreatif
+                        di Kabupaten Purwakarta untuk menciptakan ekosistem yang berkelanjutan.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-800">Networking</h3>
+                            <p class="text-sm text-gray-600 mt-1">Koneksi antar pelaku</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fas fa-lightbulb text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-800">Pelatihan</h3>
+                            <p class="text-sm text-gray-600 mt-1">Pengembangan skill</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fas fa-calendar-alt text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-800">Event</h3>
+                            <p class="text-sm text-gray-600 mt-1">Pameran & festival</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fas fa-handshake text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-800">Kolaborasi</h3>
+                            <p class="text-sm text-gray-600 mt-1">Partnership bisnis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="bg-gradient-to-br from-green-100 to-yellow-100 rounded-3xl p-8 max-w-md shadow-xl">
+                        <div class="bg-white rounded-2xl p-6 shadow-md">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Kategori Ekraf</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700 font-medium">Kriya</span>
+                                        <span class="text-green-600 font-semibold">25%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full"
+                                            style="width: 25%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700 font-medium">Kuliner</span>
+                                        <span class="text-green-600 font-semibold">35%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full"
+                                            style="width: 35%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700 font-medium">Fashion</span>
+                                        <span class="text-green-600 font-semibold">20%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full"
+                                            style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700 font-medium">Digital</span>
+                                        <span class="text-green-600 font-semibold">20%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full"
+                                            style="width: 20%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-green-600 font-semibold text-xl uppercase tracking-wider">Our Events</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-2">Program Unggulan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Berbagai program telah dilaksanakan untuk mendukung pertumbuhan pelaku ekonomi kreatif di Purwakarta
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl shadow-md service-card hover:shadow-xl">
+                    <div class="w-52 h-52 flex justify-items-center items-center ml-10 mb-2.5">
+                        <img src="img/pasar_kreatif_purwakarta.jpg" alt="">
+                    </div>
+                    <div class="p-4 text-justify">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pasar Kreatif <br>Purwakarta 2024</h3>
+                        <p class="text-gray-600 mb-4">
+                            Pasar Kreatif Purwakarta merupakan program yang di inisiasi oleh Komite Ekonomi Kreatif dan Pengurus Cabang Nahdatul
+                            Ulama (PCNU) Kabupaten Purwakarta..
+                        </p>
+                        <a href="#" class="text-green-600 font-medium flex items-center hover:gap-3 transition-all">
+                            Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl shadow-md p-4 service-card hover:shadow-xl">
+                    <div class="w-fit h-fit flex items-center justify-center mb-3">
+                        <img src="img/img_banner_primary.png" alt="">
+                    </div>
+                    <div class="p-1 mt-7 text-justify">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Purwarupa</h3>
+                        <p class="text-gray-600 mb-4">
+                            Purwarupa - Event Hari Menggambar Nasional 2024
+                        </p>
+                        <a href="#" class="text-green-600 font-medium flex items-center hover:gap-3 transition-all">
+                            Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl shadow-md service-card hover:shadow-xl">
+                    <div class="w-52 h-56 flex items-center justify-center ml-10 p-4 mb-0">
+                        <img src="img/banner_ramadhanartfest_2024.jpg" alt="">
+                    </div>
+                    <div class="px-4 py-1.5 text-justify">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Ramadhan Art Fest <br>2024</h3>
+                        <p class="text-gray-600 mb-4">
+                            Ramadhan Art Festival 2024.
+                        </p>
+                        <a href="#" class="text-green-600 font-medium flex items-center hover:gap-3 transition-all">
+                            Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl shadow-md service-card hover:shadow-xl">
+                    <div class="w-52 h-56 flex items-center justify-center ml-10 p-0 mb-0">
+                        <img src="img/logo_festival_film_pesantren_purwakarta_2024.jpg" alt="">
+                    </div>
+                    <div class="px-4 py-1.5 text-justify">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">FFP 2024</h3>
+                        <p class="text-gray-600 mb-4">
+                            Festival Film Pesantren dan Pasar Kreatif Purwakarta.
+                        </p>
+                        <a href="#" class="text-green-600 font-medium flex items-center hover:gap-3 transition-all">
+                            Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-green-600 font-semibold text-xl uppercase tracking-wider">17 Sub-Sektor</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-2">Badan Usaha di Kabupaten Purwakarta</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Daftar sub-sektor dari pelaku UMKM Purwakarta yang telah berkembang dan bekerja sama dengan kami
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center overflow-hidden relative">
+                        <i
+                            class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center overflow-hidden relative">
+                        <i
+                            class="fas fa-utensils text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-yellow-600 text-sm font-semibold">Kuliner</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Oleh-oleh Khas</h3>
+                        <p class="text-gray-600 text-sm">Berbagai makanan dan minuman khas daerah Purwakarta</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center overflow-hidden relative">
+                        <i
+                            class="fas fa-tshirt text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-purple-600 text-sm font-semibold">Fashion</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Busana Kreatif</h3>
+                        <p class="text-gray-600 text-sm">Koleksi fashion modern dengan sentuhan budaya lokal</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-indigo-500 to-fuchsia-500 flex items-center justify-center overflow-hidden relative">
+                        <i
+                            class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-indigo-500 text-sm font-semibold">Televisi & Radio</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Jual-Beli & Service </h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-lime-500 to-emerald-500 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-teal-600 to-emerald-400 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-sky-600 to-cyan-400 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-amber-500 to-yellow-300 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-rose-500 to-yellow-500 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-rose-500 to-purple-500 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-cyan-500 to-indigo-500 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-violet-500 to-fuchsia-600 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-lime-400 to-lime-600 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div
+                        class="h-64 bg-gradient-to-br from-red-400 to-orange-600 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-shopping-bag text-white text-6xl opacity-50 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">Kriya</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Kerajinan Tangan Lokal</h3>
+                        <p class="text-gray-600 text-sm">Produk kerajinan berkualitas tinggi dari pengrajin Purwakarta
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="h-12 w-12 bg-green-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">EP</span>
+                        </div>
+                        <div class="text-xl font-bold">Ekraf Purwakarta</div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Membangun ekosistem ekonomi kreatif yang berkelanjutan untuk kemajuan Purwakarta.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Agenda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">UMKM</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Tentang</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Kategori</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Kriya</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Kuliner</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Fashion</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Digital</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Hubungi Kami</h4>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-green-400 mt-1"></i>
+                            <span>Jl. Veteran No.10, Purwakarta</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone text-green-400"></i>
+                            <span>(0264) 123456</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-green-400"></i>
+                            <span>info@ekrafpwk.id</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 mt-6">
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Ekraf Purwakarta. All rights reserved. Made with <i
+                        class="fas fa-heart text-red-500"></i> for Purwakarta</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth sc
+    </script>
+</body>
+
+</html>
