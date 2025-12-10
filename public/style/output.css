@@ -1386,6 +1386,15 @@
       }
     }
   }
+  .\*\:hover\:bg-green-600 {
+    :is(& > *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-green-600);
+        }
+      }
+    }
+  }
   .focus\:outline-2 {
     &:focus {
       outline-style: var(--tw-outline-style);
