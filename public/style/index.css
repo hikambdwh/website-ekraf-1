@@ -8,6 +8,11 @@ body {
     background: linear-gradient(135deg, #16a34a 0%, #dfae26 100%);
 }
 
+.font-ekraf{
+    font-family: Arial, Helvetica, sans-serif   ;
+    font-weight: bold;
+}
+
 .service-card:hover {
     transform: translateY(-8px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
