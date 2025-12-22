@@ -687,6 +687,9 @@
   .bg-\[\#\] {
     background-color: #;
   }
+  .bg-\[\#f41313\] {
+    background-color: #f41313;
+  }
   .bg-black {
     background-color: var(--color-black);
   }
